@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Philosopher);
+body {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: hsla(197, 71%, 73%, 1);
+  cursor: move;
+  text-align: center;
+}
+/*html, body {
+  background: transparent;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  
+}*/
+
+.svg-wrapper {
+  height: 60px;
+	margin: 0 auto;
+  position: relative;
+  top: 70%;
+  transform: translateY(-50%);
+  width: 320px;
+ 
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: black;
+}
+
+.text {
+  color: black;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+p {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0px;
+  padding: 0;
+  top: 70%;
+}
